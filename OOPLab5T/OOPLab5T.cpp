@@ -3,22 +3,42 @@
 
 
 #include <iostream>
-
+#include "Lab5Exmaple.h"
+using namespace std;
 // Ваші файли загловки 
 //
-#include "Lab5Exmaple.h"
+
+void ShowTaskMenu() {
+  cout << "Exersices" << endl;
+  cout << "1. Task 1" << endl;
+  cout << "2. Task 2" << endl;
+  cout << "3. Task 3" << endl;
+}
+
 int main()
 {
-    std::cout << " Lab #5  !\n";
-    //  Код виконання завдань
-    //  Головне меню завдань
-    //  Функції та класи можуть знаходитись в інших файлах проекту
-
-    int chain = 1;
-    if (chain == 1) chain = mainExample1();
-    if (chain == 2) chain = mainExample2();
-    if (chain == 3) chain = mainExample3();
-    if (chain == 4) chain = mainExample4();
-    if (chain == 5) chain = mainExample5();
+    bool isSelected = false;
+  while (!isSelected) {
+    system("cls");
+    ShowTaskMenu();
+    int ch;
+    cin >> ch;
+    switch (ch) {
+    case 1:
+      exersice1();
+      isSelected = true;
+      break;
+    case 2:
+      exersice2();
+      isSelected = true;
+      break;
+    case 3:
+      exersice3();
+      isSelected = true;
+    default:
+      break;
+    }
+  }
+    
 
 }
